@@ -1,3 +1,18 @@
 .container {
-    padding: 20px;
-  }
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Default font */
+  font-size: 16px; /* Default font size */
+}

@@ -1,0 +1,22 @@
+.todo-container {
+  padding: 20px;
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+  color: gray;
+}

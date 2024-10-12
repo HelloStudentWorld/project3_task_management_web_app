@@ -1,0 +1,17 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+}
+
+.todo-item button {
+  margin-left: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.todo-item button:hover {
+  background-color: #d32f2f;
+}

@@ -1,5 +1,7 @@
 .todo-container {
   padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
 }
 
 .todo-list {
@@ -10,13 +12,66 @@
 .todo-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin: 5px 0;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  margin: 8px 0;
+  transition: transform 0.2s;
+}
+
+.todo-item:hover {
+  transform: translateX(5px);
 }
 
 .todo-item.completed {
-  text-decoration: line-through;
-  color: gray;
+  background-color: #e8f5e9;
+  color: #666;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 12px;
+}
+
+.todo-item span {
+  flex: 1;
+}
+
+.todo-item button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 6px 12px;
+}
+
+.todo-item button:hover {
+  background-color: #c0392b;
+}
+
+.instructions {
+  background-color: #f1f8ff;
+  border-left: 4px solid #3498db;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+.instructions h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.instructions ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.instructions li {
+  color: #34495e;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.instructions li:last-child {
+  margin-bottom: 0;
 }

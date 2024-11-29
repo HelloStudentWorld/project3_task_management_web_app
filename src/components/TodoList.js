@@ -31,8 +31,19 @@ function TodoList() {
 
   return (
     <div className="todo-container">
+      <h1 className="page-title">Todo List</h1>
       <AddTodoForm addTodo={handleAddTodo} />
       <Filter setFilter={setFilter} />
+      <div className="instructions">
+        <h3>How to Use This Todo List</h3>
+        <ul>
+          <li>Type your task in the input field and press Enter or click Add</li>
+          <li>Click the checkbox to mark a task as complete</li>
+          <li>Click the delete button (×) to remove a task</li>
+          <li>Use the filter buttons to show All, Active, or Completed tasks</li>
+          <li>Tasks are automatically saved to your browser's local storage</li>
+        </ul>
+      </div>
       <ul className="todo-list">
         {filteredTodos.map((todo) => (
           <TodoItem 

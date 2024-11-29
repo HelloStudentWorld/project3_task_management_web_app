@@ -117,13 +117,24 @@ const Deliverables = () => {
 
       <section>
         <h2>Technologies Used</h2>
-        <ul>
-          <li>React</li>
-          <li>Redux</li>
-          <li>React Router</li>
-          <li>CSS</li>
-          <li>GitHub Pages</li>
-        </ul>
+        <div className="tech-stack">
+          <h2>Technologies Used</h2>
+          <div className="tech-item">
+            <strong>React:</strong> A JavaScript library for building interactive user interfaces.
+          </div>
+          <div className="tech-item">
+            <strong>Redux:</strong> State management for predictable data flow in React applications.
+          </div>
+          <div className="tech-item">
+            <strong>React Router:</strong> Navigation and routing solution for React single-page applications.
+          </div>
+          <div className="tech-item">
+            <strong>CSS:</strong> Styling language used for designing the visual presentation.
+          </div>
+          <div className="tech-item">
+            <strong>GitHub Pages:</strong> Free hosting service for deploying static web applications.
+          </div>
+        </div>
       </section>
 
       <section>

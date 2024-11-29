@@ -1,27 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import TodoItem from './TodoItem';
 import AddTodoForm from './AddTodoForm';
 import Filter from './Filter';
 import './TodoList.css';
+import { addTodo, toggleComplete, deleteTodo } from '../redux/actions/todoActions';
 
 function TodoList() {
-  const [todos, setTodos] = useState([]);
-  const [filter, setFilter] = useState('all');
+  const todos = useSelector((state) => state);
+  const dispatch = useDispatch();
+  const [filter, setFilter] = React.useState('all');
 
-  const addTodo = (todo) => {
-    setTodos([...todos, { id: Date.now(), text: todo, completed: false }]);
+  const handleAddTodo = (todo) => {
+    dispatch(addTodo(todo));
   };
 
-  const toggleComplete = (id) => {
-    setTodos(
-      todos.map((todo) => 
-        todo.id === id ? { ...todo, completed: !todo.completed } : todo
-      )
-    );
+  const handleToggleComplete = (id) => {
+    dispatch(toggleComplete(id));
   };
 
-  const deleteTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
+  const handleDeleteTodo = (id) => {
+    dispatch(deleteTodo(id));
   };
 
   const filteredTodos = todos.filter((todo) => {
@@ -32,15 +31,15 @@ function TodoList() {
 
   return (
     <div className="todo-container">
-      <AddTodoForm addTodo={addTodo} />
+      <AddTodoForm addTodo={handleAddTodo} />
       <Filter setFilter={setFilter} />
       <ul className="todo-list">
         {filteredTodos.map((todo) => (
           <TodoItem 
             key={todo.id} 
             todo={todo} 
-            toggleComplete={toggleComplete} 
-            deleteTodo={deleteTodo} 
+            toggleComplete={handleToggleComplete} 
+            deleteTodo={handleDeleteTodo} 
           />
         ))}
       </ul>

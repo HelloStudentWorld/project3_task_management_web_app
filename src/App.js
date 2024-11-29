@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Header from './components/Header';
 import TodoList from './components/TodoList';
 import ContactForm from './components/ContactForm';
+import Deliverables from './components/Deliverables';
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/todos" element={<TodoList />} />
           <Route path="/contact" element={<ContactForm />} />
+          <Route path="/deliverables" element={<Deliverables />} />
           <Route path="*" element={<TodoList />} />
         </Routes>
       </div>

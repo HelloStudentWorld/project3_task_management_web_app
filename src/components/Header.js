@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
@@ -13,6 +13,7 @@ function Header() {
         <NavLink to="/contact" activeClassName="active">
           Contact
         </NavLink>
+        <Link to="/deliverables">Deliverables</Link>
       </div>
     </nav>
   );

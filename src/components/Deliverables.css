@@ -1,0 +1,147 @@
+/* src/components/Deliverables.css */
+.deliverables-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.component-tree ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.component-tree > ul {
+  padding-left: 0;
+}
+
+.wireframe-container {
+  padding: 20px;
+}
+
+.wireframe {
+  border: 2px solid #333;
+  padding: 20px;
+  margin: 20px 0;
+  background: #fff;
+}
+
+.header-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.main-container {
+  padding: 20px;
+}
+
+.filter-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+}
+
+.todo-list-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+}
+
+.add-todo {
+  border: 1px dashed #999;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.todo-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.contact-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form > div {
+  border: 1px dashed #999;
+  padding: 10px;
+}
+
+.todo-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.state-tree {
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.state-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.node-content {
+  padding: 10px;
+  border: 2px solid #666;
+  border-radius: 5px;
+  background: #f8f8f8;
+  min-width: 150px;
+  text-align: center;
+  font-family: 'Consolas', monospace;
+}
+
+.node-children {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-top: 20px;
+}
+
+.node-children::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 20px;
+  border-left: 2px solid #666;
+}
+
+.state-node:not(.leaf) > .node-children::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 25%;
+  right: 25%;
+  border-top: 2px solid #666;
+}
+
+.leaf .node-content {
+  background: #e8e8e8;
+  border-style: dashed;
+}

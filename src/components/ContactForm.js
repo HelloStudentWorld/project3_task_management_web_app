@@ -1,91 +1,62 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import './ContactForm.css';
 
 function ContactForm() {
-  const [form, setForm] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    comments: ''
-  });
-
-  const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form Submitted:', form);
-    // Reset form
-    setForm({
-      firstName: '',
-      lastName: '',
-      email: '',
-      comments: ''
-    });
-  };
-
+  const [state, handleSubmit] = useForm("xkgwdvja");
+  if (state.succeeded) {
+      return <p>Thanks for joining!</p>;
+  }
   return (
-    <div>
-      <h1 className="page-title">Contact Us</h1>
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <div className="instructions">
-          <h3>How to Use This Contact Form</h3>
-          <ul>
-            <li>Fill in your name in the Name field</li>
-            <li>Provide a valid email address</li>
-            <li>Write your message in the Message field</li>
-            <li>All fields are required</li>
-            <li>Click Submit to send your message</li>
-          </ul>
-        </div>
-        <label>
-          First Name:
-          <input 
-            type="text" 
-            name="firstName" 
-            value={form.firstName} 
-            onChange={handleChange} 
-            required 
-          />
-        </label>
-        <label>
-          Last Name:
-          <input 
-            type="text" 
-            name="lastName" 
-            value={form.lastName} 
-            onChange={handleChange} 
-            required 
-          />
-        </label>
-        <label>
-          Email:
-          <input 
-            type="email" 
-            name="email" 
-            value={form.email} 
-            onChange={handleChange} 
-            required 
-          />
-        </label>
-        <label>
-          Comments:
-          <textarea 
-            name="comments" 
-            value={form.comments} 
-            onChange={handleChange} 
-            required 
-          />
-        </label>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit} className="contact-form">
+      <h2>Contact Me</h2>
+      <label htmlFor="name">
+        Name
+      </label>
+      <input
+        id="name"
+        type="text" 
+        name="name"
+        className="form-input"
+      />
+      <label htmlFor="email">
+        Email Address
+      </label>
+      <input
+        id="email"
+        type="email" 
+        name="email"
+        className="form-input"
+      />
+      <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
+      <label htmlFor="message">
+        Message
+      </label>
+      <textarea
+        id="message"
+        name="message"
+        className="form-textarea"
+      />
+      <ValidationError 
+        prefix="Message" 
+        field="message"
+        errors={state.errors}
+      />
+      <button type="submit" disabled={state.submitting} className="form-button">
+        Submit
+      </button>
+    </form>
   );
 }
 
-export default ContactForm;
+function App() {
+  return (
+    <ContactForm />
+  );
+}
+
+export default App;

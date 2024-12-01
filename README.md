@@ -38,7 +38,7 @@ Viewing Tasks:
 All tasks are displayed in a list format, showing the task description and status.
 
 How to Run Locally:
-Clone the repository: git clone <repository-url>
+Clone the repository: git clone https://github.com/HelloStudentWorld/project3_task_management_web_app
 Navigate to the project directory: cd project3-task-management-web-app
 Install dependencies: npm install
 Start the application: npm start

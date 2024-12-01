@@ -1,12 +1,15 @@
 # Project 3: Task Management Web App
 Student Name: Alan DG
 
-GitHub Link: 
+GitHub Pages Link: https://hellostudentworld.github.io/project3_task_management_web_app/
+
+Github Project Link: https://github.com/HelloStudentWorld/project3_task_management_web_app
 
 # Outline
 - Project Overview, Features, Deployment
 - Usage Instructions
 - User Stories
+- Wireframes & State Tree
 - Project Files and Structure
 - Technologies Used
 - Future Improvements
@@ -48,6 +51,10 @@ User Story 1: As a user, I want to create new tasks, so that I can keep track of
 User Story 2: As a user, I want to edit existing tasks, so that I can update their details.
 
 User Story 3: As a user, I want to delete tasks, so that I can remove items that are no longer needed.
+
+# Wireframes & State Tree
+
+Please see the Deliverables page located in the project Github Pages Navigation Bar Link on the project website for the Wireframes & State Tree. Thank you
 
 # Project Files and Structure
 

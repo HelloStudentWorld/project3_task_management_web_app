@@ -2,7 +2,7 @@
   "name": "my-todo-app",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://HelloStudentWorld.github.io/my-todo-app",
+  "homepage": "https://HelloStudentWorld.github.io/project3_task_management_web_app",
   "dependencies": {
     "@formspree/react": "^2.5.1",
     "gh-pages": "^3.2.3",

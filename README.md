@@ -54,7 +54,7 @@ User Story 3: As a user, I want to delete tasks, so that I can remove items that
 
 # Wireframes & State Tree
 
-Please see the Deliverables page located in the project Github Pages Navigation Bar Link on the project website for the Wireframes & State Tree. Thank you
+For Wireframes & State Tree, please see the Deliverables page located in the project Github Pages Navigation Bar Link on the project website. Thank you.
 
 # Project Files and Structure
 

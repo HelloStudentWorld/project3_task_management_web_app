@@ -1,7 +1,7 @@
 # Project 3: Task Management Web App
 Student Name: Alan DG
 
-GitHub Link: [LINK_HERE](https://github.com/HelloStudentWorld/project3_task_management_web_app)
+GitHub Link: 
 
 # Outline
 - Project Overview, Features, Deployment
